@@ -44,3 +44,14 @@
   tasks:
     - ansible.builtin.debug:
         msg: host is {{ansible_hostname}}
+
+# Giving output of a task to a variable
+- name: Register a variable example
+  hosts: all
+  tasks:
+    - name: Getting uptime
+      ansible.builtin.shell: uptime
+      register: out
+    - name: Printing register
+      ansible.builtin.debug:
+        msg: output is {{out}}
