@@ -1,0 +1,11 @@
+- hosts: all
+  tasks:
+    - name: Printing hello
+      ansible.builtin.debug:
+        msg: "hello"
+
+- hosts: all
+  tasks:
+    - name: printing bye
+      ansible.builtin.debug:
+        msg: "bye"
