@@ -29,3 +29,11 @@
         URL: task.var.com
       ansible.builtin.debug:
         msg: url is {{URL}}
+
+# Accessing var from Inventory file
+- name: Demo on var from inventory
+  hosts: all
+  tasks:
+    - name: Printing var from inventory file
+      ansible.builtin.debug:
+        msg: {{URL}}
