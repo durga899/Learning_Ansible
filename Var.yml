@@ -8,7 +8,6 @@
       ansible.builtin.debug:
         msg:
           - url = {{ URL }}
-            " {{ Founder }} quotes are necessary when variable is at first"
 
 - name: Demo on file var
   hosts: all
