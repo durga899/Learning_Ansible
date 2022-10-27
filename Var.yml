@@ -7,5 +7,13 @@
     - name: Print URL
       ansible.builtin.debug:
         msg:
-          - url = {{ URL }}
-            " {{ Founder }} quotes are necessary when variable is at first"
+           url = {{ URL }} " {{ Founder }} quotes are necessary when variable is at first"
+
+- name: Demo on file var
+  hosts: all
+  vars_file:
+    - sample_var.yml
+  tasks:
+    - name: Printing var from file
+      ansible.builtin.debug:
+        msg: url = {{URL}}
