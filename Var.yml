@@ -8,4 +8,4 @@
       ansible.builtin.debug:
         msg:
           - url = {{ URL }}
-            " {{ Founder }} "
+            " {{ Founder }} quotes are necessary when variable is at first"
