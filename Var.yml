@@ -7,4 +7,4 @@
     - name: Print URL
       ansible.builtin.debug:
         - msg: url = {{ URL }}
-        - msg: '{{ Founder }} is the founder'
+               " {{ Founder }} "
