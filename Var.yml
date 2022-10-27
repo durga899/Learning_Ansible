@@ -8,10 +8,11 @@
       ansible.builtin.debug:
         msg:
           - url = {{ URL }}
+          - "{{Founder}} Quotes are required when var is at first"
 
 - name: Demo on file var
   hosts: all
-  vars_file:
+  vars_files:
     - sample_var.yml
   tasks:
     - name: Printing var from file
