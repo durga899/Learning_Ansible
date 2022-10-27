@@ -18,3 +18,14 @@
     - name: Printing var from file
       ansible.builtin.debug:
         msg: url = {{URL}}
+
+# Declaring variable in tasks
+
+- name: Task level var
+  hosts: all
+  tasks:
+    - name: Printing task var
+      vars:
+        URL: task.var.com
+      ansible.builtin.debug:
+        msg: url is {{URL}}
