@@ -6,5 +6,6 @@
   tasks:
     - name: Print URL
       ansible.builtin.debug:
-        - msg: url = {{ URL }}
-               " {{ Founder }} "
+        msg:
+          - url = {{ URL }}
+            " {{ Founder }} "
