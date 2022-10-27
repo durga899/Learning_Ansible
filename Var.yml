@@ -37,3 +37,10 @@
     - name: Printing var from inventory file
       ansible.builtin.debug:
         msg: "{{URL}}"
+
+# Pre-defined variables
+- name: Accessing Pre-defined variables
+  hosts: all
+  tasks:
+    - ansible.builtin.debug:
+        msg: host is {{ansible_hostname}}
